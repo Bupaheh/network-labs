@@ -15,6 +15,10 @@ dependencies {
     implementation("com.athaydes.rawhttp:rawhttp-core:2.5.2")
 }
 
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}
+
 tasks.test {
     useJUnitPlatform()
 }
