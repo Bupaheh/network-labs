@@ -37,9 +37,9 @@ fun main() {
         logger.close()
     }.start()
 
+    println("To exit input \"q\"")
     while (true) {
-        println("To exit input \"q\"")
-        val input = readln()
+        val input = readlnOrNull() ?: continue
 
         if (input == "q") {
             server.close()
