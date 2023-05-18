@@ -61,6 +61,7 @@ class Network(val numNodes: Int, val edges: List<Pair<Int, Int>>) {
 
         suspend fun run() {
             neighbors.forEach { lastUpdate[it] = System.currentTimeMillis() }
+            printTable("Initial")
 
             while (!stopFlag.get()) {
                 var newTable = table.clone()
